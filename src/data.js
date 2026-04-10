@@ -11,10 +11,16 @@ export const globalStats = {
 export const collaborators = [
   {
     name: "Samuel",
-    totalHours: 175,
+    totalHours: 189,
     projects: [
-      { name: "Motor Presupuestos", desc: "Cálculo dinámico de costos y amortización CAPEX/OPEX.", hours: 95, difficulty: "Alta complejidad matemática", estClose: "15 de Mayo" },
-      { name: "Kardex Web", desc: "Sincronización de stock físico vs digital.", hours: 80, difficulty: "Inconsistencias con bases heredadas", estClose: "30 de Abril" }
+      { name: "Motor Presupuestos", desc: "Cálculo dinámico de costos y amortización CAPEX/OPEX.", hours: 64, difficulty: "Alta complejidad matemática", estClose: "20 de Abril" },
+      { name: "Kardex Web", desc: "Sincronización de stock físico vs digital.", hours: 13, difficulty: "Inconsistencias con bases heredadas", estClose: "30 de Abril" },
+      { name: "Evaluaciones (Eval)", desc: "Notificaciones masivas y cargas CSV.", hours: 34, difficulty: "Latencia en Amazon SES", estClose: "Finalizado" },
+      { name: 'Reuniones, apoyos y otros', desc: 'Participación en reuniones, apoyo a compañeros y tareas administrativas.', hours: 13, difficulty: 'Tareas variadas y no planificadas', estClose: 'Continuo' },
+      { name: 'Automatización y clasificación de actas', desc: 'Desarrollo de flujos para descarga y clasificación de actas en OneDrive y SIG.', hours: 20, difficulty: 'Integración con sistemas heredados y manejo de formatos variados', estClose: '30 de Abril' },
+      { name: 'Refactors Automatización de cumpleaños', desc: 'Optimización de flujos para automatización de felicitaciones de cumpleaños.', hours: 42, difficulty: 'Integración con sistema de calendario', estClose: 'Finalizado' },
+      { name: 'Refactors UI/UX modulo transporte', desc: 'Optimización de la interfaz de usuario y experiencia del usuario para el módulo de transporte.', hours: 3, difficulty: 'Diseño responsivo y compatibilidad con navegadores', estClose: 'Finalizado' }
+
     ],
     daysWorked: 21,
   },
@@ -32,9 +38,11 @@ export const collaborators = [
     name: "Emmanuel",
     totalHours: 184,
     projects: [
-      { name: "Automatización Financiera", desc: "Scraping y procesamiento de facturas.", hours: 85, difficulty: "Formatos inconsistentes en PDFs", estClose: "10 de Mayo" },
-      { name: "Core Mobile Institucional", desc: "Arquitectura base de la aplicación híbrida.", hours: 86, difficulty: "Integración de dependencias nativas", estClose: "30 de Abril" },
-      { name: "Kardex Web", desc: "Sincronización de stock físico vs digital.", hours: 80, difficulty: "Inconsistencias con bases heredadas", estClose: "30 de Abril" }
+      { name: "Automatización Financiera", desc: "Scraping y procesamiento de facturas.", hours: 58, difficulty: "Formatos inconsistentes en PDFs", estClose: "10 de Mayo" },
+      { name: "Kardex Web", desc: "Sincronización de stock físico vs digital.", hours: 79, difficulty: "Inconsistencias con bases heredadas", estClose: "30 de Abril" },
+      { name: "Enter - Carga Masiva de PDFs", desc: "Automatización de carga de documentos PDF.", hours: 28, difficulty: "Accesibilidad y credenciales", estClose: "24 de Abril" },
+      { name: 'DRACO', desc: 'Informe de discrepancias en pedidos digitados y validados', hours: 1, difficulty: '-', estClose: '15 de Mayo' },
+      { name: 'Reuniones, apoyos y otros', desc: 'Participación en reuniones, apoyo a compañeros y tareas administrativas.', hours: 18, difficulty: 'Tareas variadas y no planificadas', estClose: 'Continuo' }
     ],
     daysWorked: 21,
   }
