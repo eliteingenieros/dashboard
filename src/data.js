@@ -30,19 +30,20 @@ export const collaborators = [
   },
   {
     name: "Emmanuel",
-    totalHours: 171,
+    totalHours: 184,
     projects: [
       { name: "Automatización Financiera", desc: "Scraping y procesamiento de facturas.", hours: 85, difficulty: "Formatos inconsistentes en PDFs", estClose: "10 de Mayo" },
-      { name: "Core Mobile Institucional", desc: "Arquitectura base de la aplicación híbrida.", hours: 86, difficulty: "Integración de dependencias nativas", estClose: "30 de Abril" }
+      { name: "Core Mobile Institucional", desc: "Arquitectura base de la aplicación híbrida.", hours: 86, difficulty: "Integración de dependencias nativas", estClose: "30 de Abril" },
+      { name: "Kardex Web", desc: "Sincronización de stock físico vs digital.", hours: 80, difficulty: "Inconsistencias con bases heredadas", estClose: "30 de Abril" }
     ],
     daysWorked: 21,
   }
 ];
 
 export const automations = [
-  { owner: "Emmanuel", title: "Descarga de facturas", items: ["Descarga automática", "Clasificación por proveedor", "Validación DRACO", "Reporte de discrepancias"] },
-  { owner: "Samuel", title: "AWS & Infra", items: ["Pipeline CI/CD Elite 360", "Envíos masivos SES", "Sistema de tokens OTP"] },
-  { owner: "Gonzalo", title: "Data & Flujos", items: ["Carga masiva PDFs Enter", "Descarga actas SIG", "Flujos de aprobación administrativos"] }
+  { owner: "Emmanuel", items: ["Clasificación de Pila", "Clasificación de ARL", "Descarga automática facturas DIAN", "Enter - carga de pdfs", "conversión de archivos para Generic Transfer", "Envío de correos de facturas descargas a siesa"] },
+  { owner: "Samuel", items: ["Envío de cumpleaños + tarjetas personalizadas", "Descarga actas email + clasificación en OneDriive por mes y proyecto", "Sincronización y clasificación actas SIG por  colaborador", "Automatización flujo de aprobaciones & paz y salvos"] },
+  { owner: "Gonzalo", items: ["Carga masiva PDFs Enter", "Descarga actas SIG", "Flujos de aprobación administrativos"] }
 ];
 
 export const infraReport = {

@@ -150,7 +150,7 @@ const App = () => {
               {automations.map((a, i) => (
                 <div key={i} className="stat-card" style={{ background: i === 0 ? '#f0fdf4' : i === 1 ? '#f8fafc' : '#fff7ed', borderTop: 'none' }}>
                   <h4 style={{ margin: '0 0 15px 0', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <ChevronRight size={18} /> {a.owner}: {a.title}
+                    <ChevronRight size={18} /> {a.owner}
                   </h4>
                   <ul style={{ paddingLeft: '20px', margin: 0, fontSize: '0.9rem' }}>
                     {a.items.map((item, ii) => <li key={ii} style={{ marginBottom: '5px' }}>{item}</li>)}
