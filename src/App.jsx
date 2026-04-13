@@ -8,9 +8,9 @@ import {
   RefreshCcw,
   FileText
 } from 'lucide-react';
-import { globalStats, collaborators, infraReport } from './data';
 import './index.css';
 import Automatizations from './Automatizations';
+import { collaborators, globalStats, infraReport } from './data';
 
 const StatCard = ({ title, value, subtext, icon: Icon, color = 'var(--elite-green)' }) => (
   <div className="stat-card" style={{ borderTopColor: color }}>

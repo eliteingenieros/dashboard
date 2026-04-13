@@ -98,10 +98,38 @@ export const automations = [
   {
     owner: "Samuel",
     items: [
-      "Envío automatizado de felicitaciones de cumpleaños con tarjetas personalizadas.",
-      "Descarga y clasificación automática de actas desde correo hacia OneDrive por mes y proyecto.",
-      "Sincronización y organización de actas en SIG por colaborador.",
-      "Automatización de flujos de aprobación y gestión de paz y salvos."
+      {
+        name: "Automatización de Cumpleaños",
+        desc: "Envío automatizado de felicitaciones con tarjetas personalizadas por colaborador",
+        impact: "Eliminación del 100% de la gestión manual de programación de correos y creación de tarjetas.",
+        timeBefore: "10 horas mensuales",
+        timeAfter: "5 minutos (Auditoría)",
+        status: "Implementado",
+      },
+      {
+        name: "Clasificación de Actas (OneDrive)",
+        desc: "Flujo que descarga actas desde el correo electrónico y las clasifica automáticamente en carpetas de OneDrive por mes y proyecto.",
+        impact: "Organización inmediata de documentos y facilidad de auditoría en tiempo real.",
+        timeBefore: "9 horas mensuales",
+        timeAfter: "5 minutos (revisión)",
+        status: "Implementado",
+      },
+      {
+        name: "Sincronización SIG por Colaborador",
+        desc: "Organización y carga de actas procesadas directamente en el sistema SIG, vinculándolas al perfil de cada colaborador.",
+        impact: "Centralización de la información y reducción de errores en la carga manual al sistema central.",
+        timeBefore: "9 horas mensuales",
+        timeAfter: "No definido",
+        status: "Pendiente",
+      },
+      {
+        name: "Flujo de aprobaciones (desvinculaciones) y Paz y Salvos",
+        desc: "Automatización de los flujos de aprobación y generación de documentos de paz y salvo para procesos administrativos.",
+        impact: "Agilización de trámites de salida y mayor trazabilidad en las aprobaciones pendientes.",
+        timeBefore: "No definido",
+        timeAfter: "No definido",
+        status: "Pendiente",
+      }
     ]
   },
   {
