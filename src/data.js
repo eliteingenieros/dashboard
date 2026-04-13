@@ -24,9 +24,9 @@ export const collaborators = [
     name: "Emmanuel",
     totalHours: 184,
     projects: [
-      { name: "Automatización Financiera", desc: "Scraping y procesamiento de facturas.", hours: 58, difficulty: "Formatos inconsistentes en PDFs", estClose: "10 de Mayo" },
+      { name: "Automatización Financiera", desc: "Scraping y procesamiento de facturas.", hours: 58, difficulty: "Validación reCAPTCHA en el portal DIAN", estClose: "Finalizado" },
       { name: "Kardex Web", desc: "Sincronización de stock físico vs digital.", hours: 79, difficulty: "Complejidad lógica", estClose: "30 de Abril" },
-      { name: "Enter - Carga Masiva de PDFs", desc: "Automatización de carga de documentos PDF.", hours: 28, difficulty: "Accesibilidad y credenciales", estClose: "24 de Abril" },
+      { name: "Enter - Carga Masiva de PDFs", desc: "Automatización de carga de documentos PDF.", hours: 28, difficulty: "Accesibilidad y credenciales", estClose: "30 de Abril" },
       { name: 'DRACO', desc: 'Informe de discrepancias en pedidos digitados y validados', hours: 1, difficulty: '-', estClose: '15 de Mayo' },
       { name: 'Reuniones, apoyos y otros', desc: 'Participación en reuniones, apoyo a compañeros y tareas administrativas.', hours: 18, difficulty: 'Tareas variadas y no planificadas', estClose: 'Continuo' }
     ],
