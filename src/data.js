@@ -1,5 +1,5 @@
 export const globalStats = {
-  totalHours: "524h",
+  totalHours: "551h",
   prAcceptance: 81,
   prRebound: 19,
   automationsCount: 7,
@@ -14,7 +14,7 @@ export const collaborators = [
     totalHours: 189,
     projects: [
       { name: "Motor Presupuestos", desc: "Cálculo dinámico de costos y amortización CAPEX/OPEX.", hours: 64, difficulty: "Alta complejidad matemática", estClose: "20 de Abril" },
-      { name: "Kardex Web", desc: "Sincronización de stock físico vs digital.", hours: 13, difficulty: "Inconsistencias con bases heredadas", estClose: "30 de Abril" },
+      { name: "Kardex Web", desc: "Sincronización de stock físico vs digital.", hours: 13, difficulty: "Complejidad lógica", estClose: "30 de Abril" },
       { name: "Evaluaciones (Eval)", desc: "Notificaciones masivas y cargas CSV.", hours: 34, difficulty: "Latencia en Amazon SES", estClose: "Finalizado" },
       { name: 'Reuniones, apoyos y otros', desc: 'Participación en reuniones, apoyo a compañeros y tareas administrativas.', hours: 13, difficulty: 'Tareas variadas y no planificadas', estClose: 'Continuo' },
       { name: 'Automatización y clasificación de actas', desc: 'Desarrollo de flujos para descarga y clasificación de actas en OneDrive y SIG.', hours: 20, difficulty: 'Integración con sistemas heredados y manejo de formatos variados', estClose: '30 de Abril' },
@@ -39,7 +39,7 @@ export const collaborators = [
     totalHours: 184,
     projects: [
       { name: "Automatización Financiera", desc: "Scraping y procesamiento de facturas.", hours: 58, difficulty: "Formatos inconsistentes en PDFs", estClose: "10 de Mayo" },
-      { name: "Kardex Web", desc: "Sincronización de stock físico vs digital.", hours: 79, difficulty: "Inconsistencias con bases heredadas", estClose: "30 de Abril" },
+      { name: "Kardex Web", desc: "Sincronización de stock físico vs digital.", hours: 79, difficulty: "Complejidad lógica", estClose: "30 de Abril" },
       { name: "Enter - Carga Masiva de PDFs", desc: "Automatización de carga de documentos PDF.", hours: 28, difficulty: "Accesibilidad y credenciales", estClose: "24 de Abril" },
       { name: 'DRACO', desc: 'Informe de discrepancias en pedidos digitados y validados', hours: 1, difficulty: '-', estClose: '15 de Mayo' },
       { name: 'Reuniones, apoyos y otros', desc: 'Participación en reuniones, apoyo a compañeros y tareas administrativas.', hours: 18, difficulty: 'Tareas variadas y no planificadas', estClose: 'Continuo' }
@@ -49,9 +49,69 @@ export const collaborators = [
 ];
 
 export const automations = [
-  { owner: "Emmanuel", items: ["Clasificación de Pila", "Clasificación de ARL", "Descarga automática facturas DIAN", "Enter - carga de pdfs", "conversión de archivos para Generic Transfer", "Envío de correos de facturas descargas a siesa"] },
-  { owner: "Samuel", items: ["Envío de cumpleaños + tarjetas personalizadas", "Descarga actas email + clasificación en OneDriive por mes y proyecto", "Sincronización y clasificación actas SIG por  colaborador", "Automatización flujo de aprobaciones & paz y salvos"] },
-  { owner: "Gonzalo", items: ["Carga masiva PDFs Enter", "Descarga actas SIG", "Flujos de aprobación administrativos"] }
+  {
+    owner: "Emmanuel",
+    items: [{
+      name: "Clasificación de Pila",
+      desc: "Automatización del proceso de clasificación y organización de aportes a seguridad social (PILA) por colaborador en el SIG.",
+      impact: "Disminución significativa del tiempo operativo y mejora en la eficiencia del proceso.",
+      timeBefore: "1 semana (hasta 15 días)",
+      timeAfter: "1.5 horas",
+      status: "Implementado",
+    }, {
+      name: "Clasificación de ARL",
+      desc: "Automatización de la clasificación y organización de cada ARL por colaborador en el SIG.",
+      impact: "Optimización del tiempo de gestión y reducción de carga operativa.",
+      timeBefore: "1 semana (hasta 15–21 días)",
+      timeAfter: "1.5 horas",
+      status: "Implementado",
+    }, {
+      name: "Descarga automática de facturas DIAN",
+      desc: "Automatización para la descarga centralizada de facturas desde la DIAN, garantizando cobertura total sin depender de correos.",
+      impact: "Ahorro de tiempo y aseguramiento del 100% de las facturas, habilitando integración con procesos contables y flujos automatizados.",
+      timeBefore: "3 horas diarias",
+      timeAfter: "Automatizado",
+      status: "Implementado",
+    }, {
+      name: "Enter – Carga automática de PDFs",
+      desc: "Automatización para la carga de documentos PDF (pedidos) en el aplicativo Enter de EPM.",
+      impact: "Mayor eficiencia operativa y reducción de errores manuales en la gestión documental.",
+      timeBefore: "No definido",
+      timeAfter: "No definido",
+      status: "En desarrollo",
+    }, {
+      name: "Conversión de archivos para Generic Transfer",
+      desc: "Automatización de la conversión de archivos a formatos compatibles con Generic Transfer.",
+      impact: "Estandarización de formatos y reducción del tiempo de procesamiento manual.",
+      timeBefore: "No definido",
+      timeAfter: "No definido",
+      status: "Pendiente",
+    }, {
+      name: "Envío automatizado de facturas a Siesa",
+      desc: "Automatización del envío de facturas descargadas hacia el sistema Siesa.",
+      impact: "Agilización del flujo contable y reducción de tareas manuales repetitivas.",
+      timeBefore: "No definido",
+      timeAfter: "No definido",
+      status: "Pendiente",
+    }]
+  },
+  {
+    owner: "Samuel",
+    items: [
+      "Envío automatizado de felicitaciones de cumpleaños con tarjetas personalizadas.",
+      "Descarga y clasificación automática de actas desde correo hacia OneDrive por mes y proyecto.",
+      "Sincronización y organización de actas en SIG por colaborador.",
+      "Automatización de flujos de aprobación y gestión de paz y salvos."
+    ]
+  },
+  {
+    owner: "Gonzalo",
+    items: [
+      "Carga masiva automatizada de PDFs en Enter.",
+      "Descarga automatizada de actas desde SIG.",
+      "Automatización de flujos de aprobación administrativos."
+    ]
+  }
 ];
 
 export const infraReport = {

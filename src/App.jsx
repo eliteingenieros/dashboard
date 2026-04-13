@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import { 
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as ReTooltip, ResponsiveContainer, 
-  PieChart, Pie, Cell, Legend 
+import {
+  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as ReTooltip, ResponsiveContainer,
+  PieChart, Pie, Cell, Legend
 } from 'recharts';
-import { 
-  Layout, Code, Cpu, Shield, Users, Clock, CheckCircle, AlertTriangle, 
-  BarChart3, RefreshCcw, FileText, ChevronRight
+import {
+  Layout, Shield, Users, Clock, CheckCircle, AlertTriangle,
+  RefreshCcw,
+  FileText
 } from 'lucide-react';
-import { globalStats, collaborators, automations, infraReport } from './data';
+import { globalStats, collaborators, infraReport } from './data';
 import './index.css';
-
-const COLORS = ['#2e7d32', '#86868b', '#e65100', '#1565c0'];
+import Automatizations from './Automatizations';
 
 const StatCard = ({ title, value, subtext, icon: Icon, color = 'var(--elite-green)' }) => (
   <div className="stat-card" style={{ borderTopColor: color }}>
@@ -26,7 +26,6 @@ const StatCard = ({ title, value, subtext, icon: Icon, color = 'var(--elite-gree
 const App = () => {
   const [activeTab, setActiveTab] = useState('desarrollo');
 
-  // Chart Data
   const prData = [
     { name: 'Aceptados', value: globalStats.prAcceptance, color: '#2e7d32' },
     { name: 'Rebotes', value: globalStats.prRebound, color: '#c62828' }
@@ -45,16 +44,14 @@ const App = () => {
             DIRECCIÓN DE TECNOLOGÍA E INNOVACIÓN
           </div>
           <div className="tabs-container" style={{ margin: 0, border: 0 }}>
-            <div 
-              className={`tab ${activeTab === 'desarrollo' ? 'active' : ''}`} 
-              onClick={() => setActiveTab('desarrollo')}
-            >
+            <div
+              className={`tab ${activeTab === 'desarrollo' ? 'active' : ''}`}
+              onClick={() => setActiveTab('desarrollo')}>
               Desarrollo
             </div>
-            <div 
-              className={`tab ${activeTab === 'infraestructura' ? 'active' : ''}`} 
-              onClick={() => setActiveTab('infraestructura')}
-            >
+            <div
+              className={`tab ${activeTab === 'infraestructura' ? 'active' : ''}`}
+              onClick={() => setActiveTab('infraestructura')}>
               Infraestructura
             </div>
           </div>
@@ -85,7 +82,7 @@ const App = () => {
                       {prData.map((entry, index) => <Cell key={`cell-${index}`} fill={entry.color} />)}
                     </Pie>
                     <ReTooltip />
-                    <Legend verticalAlign="bottom" height={36}/>
+                    <Legend verticalAlign="bottom" height={36} />
                   </PieChart>
                 </ResponsiveContainer>
                 <p style={{ fontSize: '0.8rem', color: 'var(--secondary-text)', marginTop: '10px' }}>
@@ -126,12 +123,12 @@ const App = () => {
                         <tr key={pi}>
                           {pi === 0 && (
                             <td rowSpan={c.projects.length} style={{ background: '#fafafa', fontWeight: 600 }}>
-                              {c.name}<br/>
+                              {c.name}<br />
                               <span style={{ fontWeight: 400, fontSize: '0.8rem' }}>{c.daysWorked} días</span>
                             </td>
                           )}
                           <td>
-                            <strong>{p.name}</strong><br/>
+                            <strong>{p.name}</strong><br />
                             <span style={{ fontSize: '0.85rem', color: 'var(--secondary-text)' }}>{p.desc}</span>
                           </td>
                           <td><span className="tag">{p.hours}h</span></td>
@@ -144,20 +141,7 @@ const App = () => {
                 </tbody>
               </table>
             </div>
-
-            <h2 className="section-header"><RefreshCcw size={24} /> Automatizaciones Activas</h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', marginBottom: '60px' }}>
-              {automations.map((a, i) => (
-                <div key={i} className="stat-card" style={{ background: i === 0 ? '#f0fdf4' : i === 1 ? '#f8fafc' : '#fff7ed', borderTop: 'none' }}>
-                  <h4 style={{ margin: '0 0 15px 0', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <ChevronRight size={18} /> {a.owner}
-                  </h4>
-                  <ul style={{ paddingLeft: '20px', margin: 0, fontSize: '0.9rem' }}>
-                    {a.items.map((item, ii) => <li key={ii} style={{ marginBottom: '5px' }}>{item}</li>)}
-                  </ul>
-                </div>
-              ))}
-            </div>
+            <Automatizations />
           </div>
         ) : (
           <div className="tab-content">
