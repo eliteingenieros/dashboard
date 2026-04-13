@@ -70,7 +70,7 @@ const App = () => {
               <StatCard title="Esfuerzo Grupal" value={globalStats.totalHours} subtext="~21 días p/p" icon={Clock} />
               <StatCard title="PR Aceptados" value={`${globalStats.prAcceptance}%`} subtext={`${globalStats.rejectedPRs} rechazados`} icon={CheckCircle} color="var(--elite-green)" />
               <StatCard title="Automatizaciones" value={globalStats.automationsCount} subtext="Flujos activos" icon={RefreshCcw} color="var(--info-text)" />
-              <StatCard title="Tareas Gruesas" value={globalStats.heavyTasks} subtext="Nivel Core" icon={Layout} color="var(--alert-text)" />
+              {/* <StatCard title="Tareas Gruesas" value={globalStats.heavyTasks} subtext="Nivel Core" icon={Layout} color="var(--alert-text)" /> */}
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px', marginBottom: '40px' }}>

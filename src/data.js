@@ -10,27 +10,13 @@ export const globalStats = {
 
 export const collaborators = [
   {
-    name: "Samuel",
-    totalHours: 189,
-    projects: [
-      { name: "Motor Presupuestos", desc: "Cálculo dinámico de costos y amortización CAPEX/OPEX.", hours: 64, difficulty: "Alta complejidad matemática", estClose: "20 de Abril" },
-      { name: "Kardex Web", desc: "Sincronización de stock físico vs digital.", hours: 13, difficulty: "Complejidad lógica", estClose: "30 de Abril" },
-      { name: "Evaluaciones (Eval)", desc: "Notificaciones masivas y cargas CSV.", hours: 34, difficulty: "Latencia en Amazon SES", estClose: "Finalizado" },
-      { name: 'Reuniones, apoyos y otros', desc: 'Participación en reuniones, apoyo a compañeros y tareas administrativas.', hours: 13, difficulty: 'Tareas variadas y no planificadas', estClose: 'Continuo' },
-      { name: 'Automatización y clasificación de actas', desc: 'Desarrollo de flujos para descarga y clasificación de actas en OneDrive y SIG.', hours: 20, difficulty: 'Integración con sistemas heredados y manejo de formatos variados', estClose: '30 de Abril' },
-      { name: 'Refactors Automatización de cumpleaños', desc: 'Optimización de flujos para automatización de felicitaciones de cumpleaños.', hours: 42, difficulty: 'Integración con sistema de calendario', estClose: 'Finalizado' },
-      { name: 'Refactors UI/UX modulo transporte', desc: 'Optimización de la interfaz de usuario y experiencia del usuario para el módulo de transporte.', hours: 3, difficulty: 'Diseño responsivo y compatibilidad con navegadores', estClose: 'Finalizado' }
-
-    ],
-    daysWorked: 21,
-  },
-  {
     name: "Gonzalo",
     totalHours: 178,
     projects: [
       { name: "Elite Sign", desc: "Core del sistema de firma digital y validación OTP.", hours: 90, difficulty: "Configuración estricta de seguridad", estClose: "24 de Abril" },
       { name: "Infraestructura AWS", desc: "Reestructuración de S3 y pipelines.", hours: 50, difficulty: "Permisos y CORS en producción", estClose: "15 de Abril" },
-      { name: "Evaluaciones (Eval)", desc: "Notificaciones masivas y cargas CSV.", hours: 38, difficulty: "Latencia en Amazon SES", estClose: "Finalizado" }
+      { name: "Módulo de evaluaciones v2", desc: "Notificaciones masivas y cargas CSV.", hours: 38, difficulty: "Latencia en Amazon SES", estClose: "Finalizado" },
+      { name: "Módulo de usuarios", desc: "Edición masivas y cargas CSV.", hours: 24, difficulty: "Optimización de base de datos", estClose: "Finalizado" }
     ],
     daysWorked: 22,
   },
@@ -45,10 +31,61 @@ export const collaborators = [
       { name: 'Reuniones, apoyos y otros', desc: 'Participación en reuniones, apoyo a compañeros y tareas administrativas.', hours: 18, difficulty: 'Tareas variadas y no planificadas', estClose: 'Continuo' }
     ],
     daysWorked: 21,
-  }
+  },
+  {
+    name: "Samuel",
+    totalHours: 189,
+    projects: [
+      { name: "Motor de presupuestos", desc: "Cálculo dinámico de costos y amortización CAPEX/OPEX.", hours: 64, difficulty: "Alta complejidad matemática", estClose: "20 de Abril" },
+      { name: "Kardex Web", desc: "Sincronización de stock físico vs digital.", hours: 13, difficulty: "Complejidad lógica", estClose: "30 de Abril" },
+      { name: 'Reuniones, apoyos y otros', desc: 'Participación en reuniones, apoyo a compañeros y tareas administrativas.', hours: 13, difficulty: 'Tareas variadas y no planificadas', estClose: 'Continuo' },
+      { name: 'Automatización y clasificación de actas', desc: 'Desarrollo de flujos para descarga y clasificación de actas en OneDrive y SIG.', hours: 20, difficulty: 'Integración con sistemas heredados y manejo de formatos variados', estClose: '30 de Abril' },
+      { name: 'Refactors Automatización de cumpleaños', desc: 'Optimización de flujos para automatización de felicitaciones de cumpleaños.', hours: 42, difficulty: 'Integración con sistema de calendario', estClose: 'Finalizado' },
+      { name: 'Refactors UI/UX modulo transporte', desc: 'Optimización de la interfaz de usuario y experiencia del usuario para el módulo de transporte.', hours: 3, difficulty: 'Diseño responsivo y compatibilidad con navegadores', estClose: 'Finalizado' }
+
+    ],
+    daysWorked: 21,
+  },
 ];
 
 export const automations = [
+  {
+    owner: "Gonzalo",
+    items: [
+      {
+        name: "Infraestructura en AWS",
+        desc: "Implementación en AWS para soportar las diferentes automatizaciones web",
+        impact: "Usabilidad y escalibidad dentro y fuera de elite 360.",
+        timeBefore: "",
+        timeAfter: "",
+        status: "Implementado",
+      },
+      {
+        name: "Cesantías",
+        desc: "Automatización del proceso de solicitud y aprobación de cesantías.",
+        impact: "Disminución significativa del tiempo operativo y mejora en la eficiencia del proceso.",
+        timeBefore: "1 hora",
+        timeAfter: "10 minutos",
+        status: "Implementado",
+      },
+      {
+        name: "Auditoría de nómina",
+        desc: "Automatización para comprar los volantes de PDF vs la plantilla de Excel.",
+        impact: "Disminución significativa del tiempo operativo y mejora en la eficiencia del proceso.",
+        timeBefore: "1 hora",
+        timeAfter: "10 segundos",
+        status: "Implementado",
+      },
+      {
+        name: "Envío masivo de correos",
+        desc: "Infraestructura de AWS para re usar en todos los módulos de elite 360 y Elite Sign",
+        impact: "Mejora el proceso de envío y le da más profesionalidad ya que son correos certificados y tenemos una cuota de 50 mil diarios.",
+        timeBefore: "",
+        timeAfter: "",
+        status: "Implementado",
+      },
+    ]
+  },
   {
     owner: "Emmanuel",
     items: [{
@@ -132,14 +169,6 @@ export const automations = [
       }
     ]
   },
-  {
-    owner: "Gonzalo",
-    items: [
-      "Carga masiva automatizada de PDFs en Enter.",
-      "Descarga automatizada de actas desde SIG.",
-      "Automatización de flujos de aprobación administrativos."
-    ]
-  }
 ];
 
 export const infraReport = {
